@@ -1,0 +1,17 @@
+{
+  "name": "bear-steps",
+  "version": "1.0.0",
+  "description": "Bear Steps website - promoting safe airsteps practice",
+  "scripts": {
+    "build:css": "tailwindcss -i ./styles/input.css -o ./static/styles.css --minify",
+    "watch:css": "tailwindcss -i ./styles/input.css -o ./static/styles.css --watch",
+    "build": "npm run build:css && zola build",
+    "dev": "npm run watch:css & zola serve"
+  },
+  "keywords": ["aerials", "airsteps", "dance", "safety"],
+  "author": "Bear Steps",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0"
+  }
+}

@@ -37,11 +37,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - CSS typo: font-color → color in .subtitle class
 
 ### Technical Details
-- Zero runtime dependencies (Zola and Tailwind are single binaries)
 - Content now in Markdown format for easier editing
 - Template-based architecture eliminates HTML duplication across 9 pages
-- Build time: ~6ms for Zola, ~32ms for Tailwind CSS
+- Build time: ~6ms for Zola, ~50ms for Tailwind CSS
 - GitHub Actions workflow uses shalzz/zola-deploy-action@v0.22.0 for simplified deployment
+- Build process managed via npm scripts for consistency across environments
+- Custom typography styles for improved readability without additional plugin dependencies
 
 ---
 

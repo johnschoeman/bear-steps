@@ -55,26 +55,33 @@ bear-steps/
 
 ### Prerequisites
 
-- Zola v0.22.0 - [Download](https://github.com/getzola/zola/releases/tag/v0.22.0)
-- Tailwind CSS v4 standalone CLI - [Download](https://github.com/tailwindlabs/tailwindcss/releases/latest)
-
-Both are single binaries with zero runtime dependencies.
+- **Node.js** - v20 or later (for npm)
+- **Zola v0.22.0** - [Download](https://github.com/getzola/zola/releases/tag/v0.22.0)
 
 ### Local Development
 
-1. **Build Tailwind CSS** (in one terminal):
+1. **Install dependencies:**
 ```bash
-tailwindcss -i ./styles/input.css -o ./static/styles.css --watch
+npm install
 ```
 
-2. **Run Zola dev server** (in another terminal):
+2. **Run development server:**
 ```bash
-zola serve
+npm run dev
 ```
+
+This starts both Tailwind CSS in watch mode and the Zola dev server.
 
 3. Visit `http://127.0.0.1:1111`
 
 The site will auto-reload when you make changes to content or templates.
+
+### Build Commands
+
+- `npm run build:css` - Build Tailwind CSS (minified)
+- `npm run watch:css` - Watch CSS for changes
+- `npm run build` - Build CSS + Zola site
+- `npm run dev` - Development mode (watch CSS + serve site)
 
 ### Making Changes
 

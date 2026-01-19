@@ -53,26 +53,27 @@ Bear Steps is a static website for an aerials practice group focused on promotin
 
 ## Development Commands
 
+**Install dependencies:**
+```bash
+npm install
+```
+
 **Build CSS:**
 ```bash
-tailwindcss -i ./styles/input.css -o ./static/styles.css --minify
+npm run build:css
 ```
 
 **Build site:**
 ```bash
-zola build
+npm run build
 ```
 
-**Local development** (run in two terminals):
+**Local development:**
 ```bash
-# Terminal 1 - watch CSS
-tailwindcss -i ./styles/input.css -o ./static/styles.css --watch
-
-# Terminal 2 - serve site
-zola serve
+npm run dev
 ```
 
-Visit `http://127.0.0.1:1111`
+This runs both CSS watch mode and Zola serve. Visit `http://127.0.0.1:1111`
 
 **Deploy**: Push to main branch (GitHub Actions builds and deploys to bear-steps.com)
 
