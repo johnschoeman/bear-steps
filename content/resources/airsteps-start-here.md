@@ -149,7 +149,7 @@ Ready to begin? Here's what to do next:
 1. Research local air steps instruction and practice opportunities
 2. Attend a beginner-friendly workshop or class
 3. Connect with the air steps community in your area
-4. Read our [Air Steps Practice Guidelines](/practices-for-safer-airsteps/)
+4. Read our [Air Steps Practice Guidelines](/resources/practices-for-safer-airsteps/)
 5. Commit to learning safely and patiently
 
 Welcome to the air steps community! We're excited to support your journey.

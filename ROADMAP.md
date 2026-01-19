@@ -30,20 +30,25 @@ This document outlines upcoming priorities and planned features for the Bear Ste
 ## Technical Debt / Improvements
 
 - [ ] **Accessibility Audit** - Check heading hierarchy, ensure good color contrast, add ARIA labels where helpful.
-- [ ] **CSS Organization** - Implement CSS variables for consistent theming, better organization as styles grow, fix typo on styles.css:29 (font-color should be color).
-- [ ] **Consistent Page Structure** - Create a template pattern for content pages, ensure all pages have consistent headers/footers.
+- [ ] **CSS Organization** - Implement CSS variables for consistent theming as styles grow.
 
 ---
 
 ## Completed
 
-- **[2026-01-19] Implement Static Site Generator** - Migrated to Zola v0.22.0 + Tailwind CSS v4
-  - Converted 9 HTML files to Markdown format
-  - Created reusable template partials for header, footer, and navigation
-  - Implemented GitHub Actions workflow for automated deployment
-  - Added missing CSS classes (.testimonial, .announcement-copy)
-  - Fixed CSS typo (font-color → color)
-  - Zero runtime dependencies (both tools are single binaries)
+### 2026-01-19 - Static Site Generator Migration
+
+**Implement Static Site Generator** - Migrated to Zola v0.22.0 + Tailwind CSS v4
+- Converted 9 HTML files to Markdown format
+- Created reusable template partials for header, footer, and navigation
+- Implemented GitHub Actions workflow for automated deployment with zola-deploy-action
+- Added npm build system with scripts for development and production
+- Reorganized content into hierarchical structure with resources/ section
+- Created custom typography styles for improved readability
+- Added missing CSS classes (.testimonial, .announcement-copy)
+- Fixed CSS typo (font-color → color)
+- Removed all old HTML files following Zola conventions
+- Zero runtime dependencies (both Zola and Tailwind are single binaries)
 
 ---
 

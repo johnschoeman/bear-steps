@@ -11,38 +11,44 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## 2026-01-19
+## 2026-01-19 - Zola Static Site Generator Migration
 
 ### Added
-- Populated ROADMAP.md with 15 prioritized items based on current site content and gaps
-- Created project documentation structure: enhanced README.md, CHANGELOG.md, and ROADMAP.md
-- Updated CLAUDE.md with accurate project information and working style preferences
-- Detailed Zola v0.22.0 + Tailwind CSS v4 migration plan for static site generator implementation
-- **Zola static site generator** (v0.22.0) for template-based site generation
-- **Tailwind CSS v4** standalone CLI for styling
-- Template partials for header, footer, and head elements (eliminates code duplication)
-- GitHub Actions workflow for automated deployment
-- Missing CSS classes: .testimonial and .announcement-copy
+- **Zola v0.22.0** static site generator with template-based architecture
+- **Tailwind CSS v4** standalone CLI for styling with custom typography
+- **npm build system** with package.json and build scripts (build, build:css, watch:css, dev)
+- **Template partials** for header, footer, and head elements (eliminates code duplication)
+- **GitHub Actions workflow** using shalzz/zola-deploy-action@v0.22.0 for automated deployment
+- **Section template** (section.html) for proper rendering of Zola sections
+- **Custom typography styles** for improved content readability
+- **CSS classes** for testimonials and announcement copy sections
+- **Project documentation** structure (README, CHANGELOG, ROADMAP, CLAUDE.md)
 
 ### Changed
-- **Migrated from static HTML to Zola-powered site** - all 9 pages now use Markdown content with shared templates
-- ROADMAP.md now includes specific actionable items across High/Medium/Low priority, content updates, and technical debt
-- Expanded SSG roadmap item with technology details (Zola v0.22.0, Tailwind CSS v4), benefits, and scope of migration
-- Updated migration plan to use latest versions: Zola v0.22.0 and Tailwind CSS v4 with new @import syntax
-- README.md with Zola/Tailwind development workflow
-- CLAUDE.md with updated tech stack and build commands
-- Deployment from direct HTML to GitHub Actions build pipeline
+- **Migrated from static HTML to Zola** - Converted 9 HTML pages to Markdown format
+- **Reorganized content structure** - Created resources/ section with hierarchical organization
+  - Moved 5 resource pages into /resources/ section for better URL structure
+  - Resources landing page at /resources/, individual resources at /resources/[page]/
+- **Build process** managed via npm scripts for consistency across local and CI environments
+- **Deployment** from direct HTML serving to GitHub Actions build pipeline
+- **Documentation** updated across README, CLAUDE.md with new tech stack and workflows
 
 ### Fixed
 - CSS typo: font-color → color in .subtitle class
+- Broken internal link in airsteps-start-here page to practices-for-safer-airsteps
+
+### Removed
+- Old HTML files from content/ directory (9 files)
+- Old index.html and styles.css from root directory
+- Leftover files from pre-Zola structure
 
 ### Technical Details
-- Content now in Markdown format for easier editing
-- Template-based architecture eliminates HTML duplication across 9 pages
-- Build time: ~6ms for Zola, ~50ms for Tailwind CSS
-- GitHub Actions workflow uses shalzz/zola-deploy-action@v0.22.0 for simplified deployment
-- Build process managed via npm scripts for consistency across environments
-- Custom typography styles for improved readability without additional plugin dependencies
+- **Zero runtime dependencies** - Zola and Tailwind are single binaries
+- **Build time** - ~30ms for Tailwind CSS, ~5ms for Zola
+- **Content structure** - Markdown files with TOML frontmatter
+- **URL structure** - Clean URLs via directory-based routing (/about/, /resources/start-here/)
+- **Template hierarchy** - base.html → index.html/page.html/section.html
+- **CI/CD** - GitHub Actions with Node.js caching for faster builds
 
 ---
 
