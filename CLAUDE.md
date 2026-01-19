@@ -11,42 +11,78 @@ Bear Steps is a static website for an aerials practice group focused on promotin
 
 ## Current State
 
-- **Tech Stack**: Static HTML5, CSS3
-- **Build System**: None (direct HTML/CSS)
-- **Dependencies**: None
+- **Tech Stack**: Zola v0.22.0 (static site generator) + Tailwind CSS v4
+- **Build System**: Zola for site generation, Tailwind CSS standalone CLI for styling
+- **Dependencies**: Two single binaries (Zola + Tailwind), zero runtime dependencies
 - **Testing**: Not configured
-- **Deployment**: Automatic via git push to main branch
+- **Deployment**: Automatic via GitHub Actions on push to main branch
 
 ## Project Structure
 
 ```
-├── index.html                    # Homepage with FAQ
-├── styles.css                    # Global styles
-├── bear-steps-logo.png          # Site logo
-├── content/                     # Content pages
-│   ├── about.html
-│   ├── airsteps-start-here.html
-│   ├── resources.html
-│   ├── testimonials.html
-│   └── [various policy samples]
-├── static/                      # Favicons and static assets
-├── README.md                    # Project overview and getting started
-├── CHANGELOG.md                 # Version history and changes
+├── config.toml                  # Zola configuration
+├── tailwind.config.js           # Tailwind CSS configuration
+├── content/                     # Markdown content files
+│   ├── _index.md               # Homepage
+│   ├── about.md
+│   ├── airsteps-start-here.md
+│   ├── resources.md
+│   ├── testimonials.md
+│   └── [various policy samples].md
+├── templates/                   # Zola templates
+│   ├── base.html
+│   ├── index.html
+│   ├── page.html
+│   └── partials/
+│       ├── head.html
+│       ├── header.html
+│       └── footer.html
+├── styles/
+│   └── input.css               # Tailwind CSS source
+├── static/                      # Static assets
+│   ├── bear-steps-logo.png
+│   ├── styles.css              # Built CSS (gitignored)
+│   ├── CNAME
+│   └── [favicons]
+├── public/                      # Build output (gitignored)
+├── README.md                    # Project overview
+├── CHANGELOG.md                 # Version history
 ├── ROADMAP.md                   # Upcoming priorities
 └── CLAUDE.md                    # This file
 ```
 
 ## Development Commands
 
-- **Local testing**: `open index.html` or `python -m http.server`
-- **Deploy**: Push to main branch (auto-deploys to bear-steps.com)
+**Build CSS:**
+```bash
+tailwindcss -i ./styles/input.css -o ./static/styles.css --minify
+```
+
+**Build site:**
+```bash
+zola build
+```
+
+**Local development** (run in two terminals):
+```bash
+# Terminal 1 - watch CSS
+tailwindcss -i ./styles/input.css -o ./static/styles.css --watch
+
+# Terminal 2 - serve site
+zola serve
+```
+
+Visit `http://127.0.0.1:1111`
+
+**Deploy**: Push to main branch (GitHub Actions builds and deploys to bear-steps.com)
 
 ## Working Style Preferences
 
 ### Technology Approach
 - **Keep it simple**: Prefer minimal dependencies and straightforward solutions
-- **Pragmatic about tools**: Open to modern frameworks or build tools if they add significant value, but every new dependency is something else to maintain
-- **Default to static**: Unless there's a compelling reason, keep the current static HTML/CSS approach
+- **Single binaries**: Using Zola and Tailwind standalone CLI (no npm/node runtime dependencies)
+- **Static generation**: Content in Markdown, templates for structure, zero JavaScript on frontend
+- **Pragmatic about tools**: Current stack (Zola + Tailwind) chosen for: zero runtime deps, template partials, fast builds
 
 ### Decision Making
 - **Always seek approval first**: Present options and get approval before making any changes (code or content)

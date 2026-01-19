@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="header-container">
+    <a href="/"><img src="/bear-steps-logo.png" alt="Bear Steps Logo" class="logo"></a>
+    <h1 class="header">{{ section.extra.page_title | default(value=section.title) }}</h1>
+  </div>
+
+  <br />
+  <br />
+  <h2>FAQ:</h2>
+  <div class="question">Should I lift this person I just met?</div>
+  <div class="answer">No.</div>
+
+  {% include "partials/footer.html" %}
+{% endblock %}

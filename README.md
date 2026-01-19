@@ -15,52 +15,94 @@ Bear Steps is dedicated to promoting safe airsteps practice in the aerials commu
 
 ## Tech Stack
 
-- **Frontend**: Static HTML5, CSS3
+- **Static Site Generator**: Zola v0.22.0 (Rust-based, single binary)
+- **CSS Framework**: Tailwind CSS v4 (standalone CLI, single binary)
 - **Hosting**: GitHub Pages
-- **Deployment**: Automatic via git push to main branch
+- **Deployment**: Automatic via GitHub Actions
 
 ## Project Structure
 
 ```
 bear-steps/
-├── index.html              # Homepage with FAQ
-├── styles.css              # Global styles
-├── bear-steps-logo.png     # Site logo
-├── content/                # Content pages
-│   ├── about.html
-│   ├── airsteps-start-here.html
-│   ├── resources.html
-│   ├── testimonials.html
-│   └── [sample policies and guidelines]
-└── static/                 # Favicons and static assets
+├── config.toml             # Zola configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── content/                # Markdown content files
+│   ├── _index.md          # Homepage
+│   ├── about.md
+│   ├── airsteps-start-here.md
+│   ├── resources.md
+│   ├── testimonials.md
+│   └── [sample policies and guidelines].md
+├── templates/              # Zola templates
+│   ├── base.html
+│   ├── index.html
+│   ├── page.html
+│   └── partials/
+│       ├── head.html
+│       ├── header.html
+│       └── footer.html
+├── styles/
+│   └── input.css          # Tailwind CSS source
+├── static/                 # Static assets (served from root)
+│   ├── bear-steps-logo.png
+│   ├── styles.css         # Built CSS (gitignored)
+│   ├── CNAME
+│   └── [favicons]
+└── public/                 # Build output (gitignored)
 ```
 
 ## Getting Started
 
+### Prerequisites
+
+- Zola v0.22.0 - [Download](https://github.com/getzola/zola/releases/tag/v0.22.0)
+- Tailwind CSS v4 standalone CLI - [Download](https://github.com/tailwindlabs/tailwindcss/releases/latest)
+
+Both are single binaries with zero runtime dependencies.
+
 ### Local Development
 
-Simply open the HTML file in your browser:
-
+1. **Build Tailwind CSS** (in one terminal):
 ```bash
-open index.html
+tailwindcss -i ./styles/input.css -o ./static/styles.css --watch
 ```
 
-Or serve with a local web server:
-
+2. **Run Zola dev server** (in another terminal):
 ```bash
-python -m http.server 8000
-# or
-npx serve .
+zola serve
 ```
 
-Then visit `http://localhost:8000`
+3. Visit `http://127.0.0.1:1111`
+
+The site will auto-reload when you make changes to content or templates.
 
 ### Making Changes
 
-1. Edit HTML/CSS files directly
-2. Test locally in your browser
-3. Commit and push to main branch
-4. Changes deploy automatically to bear-steps.com
+#### Content Updates
+
+Edit Markdown files in `content/` directory:
+- Frontmatter defines page metadata (title, description)
+- Content is written in Markdown
+- Internal links use format: `[Link Text](/page-slug/)`
+
+#### Style Updates
+
+Edit `styles/input.css` with custom CSS or Tailwind utilities.
+Tailwind will rebuild automatically if running with `--watch`.
+
+#### Template Updates
+
+Edit templates in `templates/` directory:
+- `base.html` - Base HTML structure
+- `page.html` - Standard content pages
+- `index.html` - Homepage
+- `partials/` - Reusable components
+
+### Deployment
+
+1. Commit and push to main branch
+2. GitHub Actions automatically builds and deploys
+3. Changes appear at bear-steps.com within 1-2 minutes
 
 ## Contributing
 

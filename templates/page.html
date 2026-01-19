@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% include "partials/header.html" %}
+
+  <div class="content">
+    {{ page.content | safe }}
+  </div>
+
+  {% include "partials/footer.html" %}
+{% endblock %}

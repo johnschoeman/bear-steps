@@ -4,11 +4,6 @@ This document outlines upcoming priorities and planned features for the Bear Ste
 
 ## High Priority
 
-- [ ] **Implement Static Site Generator** - Migrate to Zola SSG with Tailwind CSS for better content management and reduced code duplication.
-  - **Technology**: Zola v0.22.0 (Rust-based single binary) + Tailwind CSS v4 standalone CLI
-  - **Benefits**: Template partials, Markdown content, zero runtime dependencies, 3-4x faster builds than Hugo
-  - **Scope**: Convert 9 HTML files to Markdown, create reusable templates, add GitHub Actions workflow
-  - **Migration Plan**: Full plan available at `/home/john/.claude/plans/zippy-swinging-hopper.md`
 - [ ] **Add Contact Information** - Testimonials page mentions "Contact us" but no contact method exists. Add email address, contact form, or social media link.
 - [ ] **Expand Homepage FAQ** - Currently only one Q&A. Add 5-10 more common questions about consent, where to practice, how to get started, etc.
 - [ ] **Add Navigation Menu** - Add consistent top navigation for better usability, especially to access "Start Here" and other key pages from anywhere.
@@ -42,9 +37,13 @@ This document outlines upcoming priorities and planned features for the Bear Ste
 
 ## Completed
 
-_Move completed items here with completion date_
-
-- None yet
+- **[2026-01-19] Implement Static Site Generator** - Migrated to Zola v0.22.0 + Tailwind CSS v4
+  - Converted 9 HTML files to Markdown format
+  - Created reusable template partials for header, footer, and navigation
+  - Implemented GitHub Actions workflow for automated deployment
+  - Added missing CSS classes (.testimonial, .announcement-copy)
+  - Fixed CSS typo (font-color → color)
+  - Zero runtime dependencies (both tools are single binaries)
 
 ---
 

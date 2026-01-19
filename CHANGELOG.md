@@ -18,11 +18,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Created project documentation structure: enhanced README.md, CHANGELOG.md, and ROADMAP.md
 - Updated CLAUDE.md with accurate project information and working style preferences
 - Detailed Zola v0.22.0 + Tailwind CSS v4 migration plan for static site generator implementation
+- **Zola static site generator** (v0.22.0) for template-based site generation
+- **Tailwind CSS v4** standalone CLI for styling
+- Template partials for header, footer, and head elements (eliminates code duplication)
+- GitHub Actions workflow for automated deployment
+- Missing CSS classes: .testimonial and .announcement-copy
 
 ### Changed
+- **Migrated from static HTML to Zola-powered site** - all 9 pages now use Markdown content with shared templates
 - ROADMAP.md now includes specific actionable items across High/Medium/Low priority, content updates, and technical debt
 - Expanded SSG roadmap item with technology details (Zola v0.22.0, Tailwind CSS v4), benefits, and scope of migration
 - Updated migration plan to use latest versions: Zola v0.22.0 and Tailwind CSS v4 with new @import syntax
+- README.md with Zola/Tailwind development workflow
+- CLAUDE.md with updated tech stack and build commands
+- Deployment from direct HTML to GitHub Actions build pipeline
+
+### Fixed
+- CSS typo: font-color → color in .subtitle class
+
+### Technical Details
+- Zero runtime dependencies (Zola and Tailwind are single binaries)
+- Content now in Markdown format for easier editing
+- Template-based architecture eliminates HTML duplication across 9 pages
+- Build time: ~6ms for Zola, ~32ms for Tailwind CSS
 
 ---
 
