@@ -5,11 +5,6 @@ on:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,21 +17,10 @@ jobs:
           chmod +x tailwindcss-linux-x64
           sudo mv tailwindcss-linux-x64 /usr/local/bin/tailwindcss
 
-      - name: Install Zola
-        run: |
-          wget https://github.com/getzola/zola/releases/download/v0.22.0/zola-v0.22.0-x86_64-unknown-linux-musl.tar.gz
-          tar -xzf zola-v0.22.0-x86_64-unknown-linux-musl.tar.gz
-          sudo mv zola /usr/local/bin/
-
       - name: Build Tailwind CSS
         run: tailwindcss -i ./styles/input.css -o ./static/styles.css --minify
 
-      - name: Build site
-        run: zola build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          cname: bear-steps.com
+      - name: Build and Deploy with Zola
+        uses: shalzz/zola-deploy-action@v0.22.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

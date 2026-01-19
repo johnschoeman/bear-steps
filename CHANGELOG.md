@@ -41,6 +41,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Content now in Markdown format for easier editing
 - Template-based architecture eliminates HTML duplication across 9 pages
 - Build time: ~6ms for Zola, ~32ms for Tailwind CSS
+- GitHub Actions workflow uses shalzz/zola-deploy-action@v0.22.0 for simplified deployment
 
 ---
 
