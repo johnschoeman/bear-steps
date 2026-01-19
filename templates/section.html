@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="header-container">
-    <a href="/"><img src="/bear-steps-logo.png" alt="Bear Steps Logo" class="logo"></a>
-    <h1 class="header">{{ section.extra.page_title | default(value=section.title) }}</h1>
-  </div>
 
-  <div class="content">
-    {{ section.content | safe }}
-  </div>
+{% include "partials/section_header.html" %}
 
-  {% include "partials/footer.html" %}
+<div class="content">
+  {{ section.content | safe }}
+</div>
+
+{% include "partials/footer.html" %}
 {% endblock %}

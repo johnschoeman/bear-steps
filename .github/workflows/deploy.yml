@@ -3,27 +3,21 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
+      - uses: actions/checkout@v5
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build Tailwind CSS
-        run: npm run build:css
+        run: npm run css:build
 
       - name: Build and Deploy with Zola
         uses: shalzz/zola-deploy-action@v0.22.0
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAGES_BRANCH: gh-pages
+          TOKEN: ${{ secrets.TOKEN }}

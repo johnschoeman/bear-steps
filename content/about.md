@@ -3,10 +3,10 @@ title = "About - Bear Steps"
 description = "Bear Steps is an invite-only air steps practice group based in Boston, MA, dedicated to promoting safe and responsible air step practices."
 
 [extra]
-page_title = "ABOUT"
+section_title = "ABOUT"
 +++
 
-## About Bear Steps
+# About Bear Steps
 
 Bear Steps is an invite-only air steps practice group based in Boston, MA.
 

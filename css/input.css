@@ -7,7 +7,7 @@
   color: #374151;
 }
 
-.content > * + * {
+.content>*+* {
   margin-top: 1.25em;
 }
 
@@ -105,7 +105,7 @@
   font-style: italic;
   color: #111827;
   border-left: 0.25rem solid #e5e7eb;
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: "\201C" "\201D" "\2018" "\2019";
   margin-top: 1.6em;
   margin-bottom: 1.6em;
   padding-left: 1em;
@@ -172,32 +172,21 @@ li {
 }
 
 .header {
+  font-size: 3em;
   font-weight: 800;
   margin: 0;
 }
 
 .subtitle {
   font-size: 0.8em;
-  color: #343434; /* Fixed typo: was font-color */
+  color: #343434;
+  /* Fixed typo: was font-color */
   font-style: italic;
   padding-bottom: 1em;
 }
 
 .logo {
   height: 10em;
-}
-
-/* FAQ styles */
-.question {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.answer {
-  font-size: 32px;
-  font-weight: bold;
-  color: #d32f2f;
 }
 
 /* Content styles */

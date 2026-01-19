@@ -1,16 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="header-container">
-    <a href="/"><img src="/bear-steps-logo.png" alt="Bear Steps Logo" class="logo"></a>
-    <h1 class="header">{{ section.extra.page_title | default(value=section.title) }}</h1>
-  </div>
 
-  <br />
-  <br />
-  <h2>FAQ:</h2>
-  <div class="question">Should I lift this person I just met?</div>
-  <div class="answer">No.</div>
+<div class="header-container">
+  <a href="/"><img src="/bear-steps-logo.png" alt="Bear Steps Logo" class="logo"></a>
+  <h1 class="header">{{ section.extra.page_title | default(value=section.title) }}</h1>
+</div>
 
-  {% include "partials/footer.html" %}
+<br />
+<br />
+
+<div class="space-y-4">
+  <h2 class="text-2xl font-bold">FAQ:</h2>
+  <div class="text-2xl">Should I lift this person I just met?</div>
+  <div class="text-4xl font-black text-red-600">No.</div>
+</div>
+
+{% include "partials/footer.html" %}
 {% endblock %}
