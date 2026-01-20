@@ -1,144 +1,16 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-/* Prose typography styles for content pages */
-.content {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #1f2937;
-}
-
-.content>*+* {
-  margin-top: 1.25em;
-}
-
-.content h1 {
-  font-size: 2.25em;
-  line-height: 1.1111;
-  font-weight: 800;
-  margin-top: 0;
-  margin-bottom: 0.8889em;
-  color: #111827;
-}
-
-.content h2 {
-  font-size: 1.5em;
-  line-height: 1.3333;
-  font-weight: 700;
-  margin-top: 2em;
-  margin-bottom: 1em;
-  color: #111827;
-}
-
-.content h3 {
-  font-size: 1.25em;
-  line-height: 1.6;
-  font-weight: 600;
-  margin-top: 1.6em;
-  margin-bottom: 0.6em;
-  color: #111827;
-}
-
-.content h4 {
-  font-weight: 600;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  color: #111827;
-}
-
-.content p {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
-}
-
-.content a {
+/* Customize prose links to be more prominent */
+.prose a {
   color: #0066cc;
   text-decoration: underline;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.content a:hover {
+.prose a:hover {
   color: #0052a3;
-}
-
-.content strong {
-  color: #111827;
-  font-weight: 600;
-}
-
-.content em {
-  font-style: italic;
-}
-
-.content ul,
-.content ol {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
-  padding-left: 1.625em;
-}
-
-.content ul {
-  list-style-type: disc;
-}
-
-.content ol {
-  list-style-type: decimal;
-}
-
-.content li {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding-left: 0.375em;
-  list-style: inherit;
-  padding-bottom: 0;
-}
-
-.content ul ul,
-.content ul ol,
-.content ol ul,
-.content ol ol {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
-}
-
-.content blockquote {
-  font-weight: 500;
-  font-style: italic;
-  color: #111827;
-  border-left: 0.25rem solid #e5e7eb;
-  quotes: "\201C" "\201D" "\2018" "\2019";
-  margin-top: 1.6em;
-  margin-bottom: 1.6em;
-  padding-left: 1em;
-}
-
-.content code {
-  color: #111827;
-  font-weight: 600;
-  font-size: 0.875em;
-  font-family: 'Courier New', monospace;
-  background-color: #f3f4f6;
-  padding: 0.2em 0.4em;
-  border-radius: 0.25rem;
-}
-
-.content pre {
-  background-color: #1f2937;
-  color: #e5e7eb;
-  overflow-x: auto;
-  font-size: 0.875em;
-  line-height: 1.7143;
-  margin-top: 1.7143em;
-  margin-bottom: 1.7143em;
-  border-radius: 0.375rem;
-  padding: 0.8571em 1.1429em;
-}
-
-.content pre code {
-  background-color: transparent;
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  padding: 0;
+  text-decoration: underline;
 }
 
 /* Base styles */
@@ -156,13 +28,7 @@ li {
   padding-bottom: 0.5em;
 }
 
-/* Content styles */
-.content {
-  text-align: left;
-  margin-top: 30px;
-}
-
-
+/* Navigation styles */
 .nav-link {
   @apply block text-center md:inline-block text-gray-800 no-underline font-semibold text-lg px-4 py-2 rounded transition-colors duration-200 hover:bg-gray-100 hover:text-gray-900;
 }
