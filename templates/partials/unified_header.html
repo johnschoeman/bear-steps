@@ -1,0 +1,48 @@
+<div class="header-container">
+  <a href="/"><img src="/bear-steps-logo.png" alt="Bear Steps Logo" class="logo"></a>
+  <h1 class="header">
+    {% if header_context == "page" %}
+    {{ page.extra.page_title | default(value=page.title) }}
+    {% elif header_context == "section" %}
+    {{ page.extra.section_title | default(value=section.title) }}
+    {% elif header_context == "index" %}
+    {{ section.extra.page_title | default(value=section.title) }}
+    {% endif %}
+  </h1>
+</div>
+
+<nav class="
+mt-[30px]
+mb-[30px]
+py-[15px]
+">
+
+  <button id="nav-toggle" class="md:hidden
+  block
+  ml-auto
+  p-4
+  pb-8
+  cursor-pointer
+  bg-transparent" aria-label="Toggle navigation">
+    <span id="hamburger"></span>
+  </button>
+
+  <ul id="nav-links"
+    class="hidden md:flex flex-col md:flex-row justify-center items-center gap-2 md:gap-8 list-none border-gray-700 border-t-1 md:border-none p-0 pt-2 m-0">
+    <li class="pb-0 w-full md:w-auto">
+      <a href="/" class="nav-link {% if current_path == '/' %}bg-gray-200 text-gray-900{% endif %}">Home</a>
+    </li>
+    <li class="pb-0 w-full md:w-auto">
+      <a href="/resources/"
+        class="nav-link {% if current_path is containing('/resources') %}bg-gray-200 text-gray-900{% endif %}">Resources</a>
+    </li>
+    <li class="pb-0 w-full md:w-auto">
+      <a href="/about/"
+        class="nav-link {% if current_path is containing('/about') %}bg-gray-200 text-gray-900{% endif %}">About</a>
+    </li>
+    <li class="pb-0 w-full md:w-auto">
+      <a href="/testimonials/"
+        class="nav-link {% if current_path is containing('/testimonials') %}bg-gray-200 text-gray-900{% endif %}">Testimonials</a>
+    </li>
+  </ul>
+</nav>

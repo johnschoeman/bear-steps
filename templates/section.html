@@ -2,7 +2,8 @@
 
 {% block content %}
 
-{% include "partials/section_header.html" %}
+{% set header_context = "section" %}
+{% include "partials/unified_header.html" %}
 
 <div class="content">
   {{ section.content | safe }}

@@ -1,5 +1,5 @@
 +++
-title = "Resources - Bear Steps"
+title = "RESOURCES"
 description = "A collection of helpful resources for air steps practitioners at all levels."
 
 [extra]

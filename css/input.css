@@ -234,3 +234,49 @@ li {
 .announcement-copy h4 {
   margin-top: 0;
 }
+
+.nav-link {
+  @apply block text-center md:inline-block text-gray-800 no-underline font-semibold text-lg px-4 py-2 rounded transition-colors duration-200 hover:bg-gray-100 hover:text-gray-900;
+}
+
+/* Hamburger icon animation (uses pseudo-elements, can't be done with Tailwind utilities) */
+#hamburger {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #374151;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+#hamburger::before,
+#hamburger::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  left: 0px;
+  background-color: #374151;
+  transition: transform 0.3s;
+}
+
+#hamburger::before {
+  top: -10px;
+}
+
+#hamburger::after {
+  top: 10px;
+}
+
+/* Animate hamburger when active */
+#nav-toggle.active #hamburger {
+  background-color: transparent;
+}
+
+#nav-toggle.active #hamburger::before {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+#nav-toggle.active #hamburger::after {
+  transform: rotate(-45deg) translate(7px, -7px);
+}

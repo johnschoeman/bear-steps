@@ -1,5 +1,5 @@
 +++
-title = "About - Bear Steps"
+title = "ABOUT"
 description = "Bear Steps is an invite-only air steps practice group based in Boston, MA, dedicated to promoting safe and responsible air step practices."
 
 [extra]
