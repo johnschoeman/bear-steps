@@ -8,10 +8,10 @@ page_title = "TESTIMONIALS"
 
 # What People Are Saying
 
-<p class="subtitle"><em>What people are saying about lifts and dips on the dance floor.</em></p>
+<p class="text-sm text-gray-800 italic pb-4"><em>What people are saying about lifts and dips on the dance floor.</em></p>
 
-<div class="testimonial">
-<blockquote>
+<div class="my-8 p-4">
+<blockquote class="m-0 p-4 bg-gray-100 border-l-4 border-gray-200">
 
 "I did have the most delightful interaction with an older gentleman from a ballroom background who *asked* me if I would be comfortable with a lean/dip. I said no, not with partners I don't know, and he said, "that's so reasonable, thank you."
 
@@ -21,15 +21,15 @@ I wish that wasn't the high bar for my expectations."
 <p><strong>— Kat, Dancer</strong></p>
 </div>
 
-<div class="testimonial">
-<blockquote>
+<div class="my-8 p-4">
+<blockquote class="m-0 p-4 bg-gray-100 border-l-4 border-gray-200">
 "I've studied air steps with at least eight different instructors and every single one of them has said something along the lines of "never do this with someone you haven't practiced it with, and never without verbally checking in first." That's about as basic to air steps as the rock step is to the swing out"
 </blockquote>
 <p><strong>— Isaac, Dancer</strong></p>
 </div>
 
-<div class="testimonial">
-<blockquote>
+<div class="my-8 p-4">
+<blockquote class="m-0 p-4 bg-gray-100 border-l-4 border-gray-200">
 "I couple weeks ago at BSC I was dancing with a lead who I didn't know and he said "I'm going to dip you" and I said "No thank you!" He was like, "it will be fine though" and I said "still no, I do not want to be dipped." (All this while we were dancing)"
 </blockquote>
 <p><strong>— Ruth, Dancer</strong></p>

@@ -8,7 +8,7 @@ page_title = "AIR STEPS START HERE"
 
 # Getting Started with Air Steps
 
-<p class="subtitle"><em>Your guide to safely beginning your air steps journey.</em></p>
+<p class="text-sm text-gray-800 italic pb-4"><em>Your guide to safely beginning your air steps journey.</em></p>
 
 Air steps are an exciting and expressive part of partner dancing. This guide will help you understand what air steps are, how to get started safely, and what to expect on your learning journey.
 

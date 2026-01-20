@@ -8,7 +8,7 @@ page_title = "AIR STEPS NOT PERMITTED"
 
 # Sample Policy: Air Steps Not Permitted
 
-<p class="subtitle"><em>Use this policy when air steps are not appropriate for your event due to venue constraints, insurance limitations, participant skill levels, or safety concerns.</em></p>
+<p class="text-sm text-gray-800 italic pb-4"><em>Use this policy when air steps are not appropriate for your event due to venue constraints, insurance limitations, participant skill levels, or safety concerns.</em></p>
 
 This policy framework is designed for events where air steps are not permitted anywhere on the premises. This approach prioritizes accessibility, safety, and inclusivity for all participants regardless of experience level.
 

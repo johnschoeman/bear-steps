@@ -8,7 +8,7 @@ page_title = "AIR STEPS GUIDELINES"
 
 # Practices for Safer Air Steps
 
-<p class="subtitle"><em>With gratitude to Bobby White and Jessica Miltenberger for their mentorship.</em></p>
+<p class="text-sm text-gray-800 italic pb-4"><em>With gratitude to Bobby White and Jessica Miltenberger for their mentorship.</em></p>
 
 Air steps are exciting, expressive, and physically demanding. Practicing them safely protects you, your partner, and our wider dance community. The guidelines below outline shared expectations for everyone participating in an air-steps practice session.
 

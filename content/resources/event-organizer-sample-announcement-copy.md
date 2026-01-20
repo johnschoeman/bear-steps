@@ -8,7 +8,7 @@ page_title = "SAMPLE ANNOUNCEMENT COPY"
 
 # Air Steps Announcement Copy for Event Organizers
 
-<p class="subtitle"><em>Ready-to-use text for communicating air steps policies to your event participants.</em></p>
+<p class="text-sm text-gray-800 italic pb-4"><em>Ready-to-use text for communicating air steps policies to your event participants.</em></p>
 
 Use these sample announcements to clearly communicate air steps guidelines to your event attendees. Customize the text to match your event's specific policies and tone.
 
@@ -16,9 +16,9 @@ Use these sample announcements to clearly communicate air steps guidelines to yo
 
 ### Email/Website Copy
 
-<div class="announcement-copy">
+<div class="my-8 p-6 bg-gray-50 border border-gray-200 rounded">
 
-#### Air Steps Policy
+<h4 class="mt-0">Air Steps Policy</h4>
 
 We're excited to welcome air steps as part of our event! To ensure everyone's safety and enjoyment:
 
@@ -36,7 +36,7 @@ Questions about our air steps policy? Contact us at [your email] before the even
 
 ### Opening Remarks
 
-<div class="announcement-copy">
+<div class="my-8 p-6 bg-gray-50 border border-gray-200 rounded">
 
 "Welcome everyone! Before we get started, a quick reminder about air steps safety:
 
@@ -51,7 +51,7 @@ Let's have an amazing and safe event together!"
 
 ### Before Jam Circle/Competition
 
-<div class="announcement-copy">
+<div class="my-8 p-6 bg-gray-50 border border-gray-200 rounded">
 
 "Attention dancers! As we start our [jam circle/competition], here are our air steps guidelines:
 
@@ -68,7 +68,7 @@ Let's celebrate our community with safe, exciting dancing!"
 
 ### Pre-Event Post
 
-<div class="announcement-copy">
+<div class="my-8 p-6 bg-gray-50 border border-gray-200 rounded">
 
 🕺💃 Getting ready for [Event Name]! A friendly reminder about our air steps policy:
 
@@ -83,7 +83,7 @@ Safety first = more fun for everyone! See you on the dance floor! #AirStepsSafet
 
 ### Day-of Reminder Post
 
-<div class="announcement-copy">
+<div class="my-8 p-6 bg-gray-50 border border-gray-200 rounded">
 
 🎉 [Event Name] is happening NOW! Quick air steps reminder:
 
@@ -99,9 +99,9 @@ Let's have an epic and safe day of dancing! 💫
 
 ### Social Floor Sign
 
-<div class="announcement-copy">
+<div class="my-8 p-6 bg-gray-50 border border-gray-200 rounded">
 
-#### SOCIAL DANCE FLOOR
+<h4 class="mt-0">SOCIAL DANCE FLOOR</h4>
 
 **For everyone's safety and comfort:**
 
@@ -115,9 +115,9 @@ Thank you for keeping our community safe! 💙
 
 ### Air Steps Area Sign
 
-<div class="announcement-copy">
+<div class="my-8 p-6 bg-gray-50 border border-gray-200 rounded">
 
-#### AIR STEPS WELCOME
+<h4 class="mt-0">AIR STEPS WELCOME</h4>
 
 **Safety Guidelines:**
 
@@ -134,7 +134,7 @@ Event staff are here to help with any questions!
 
 ### If Someone Is Injured
 
-<div class="announcement-copy">
+<div class="my-8 p-6 bg-gray-50 border border-gray-200 rounded">
 
 **Immediate response:**
 

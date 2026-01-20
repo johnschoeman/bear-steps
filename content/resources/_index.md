@@ -6,7 +6,7 @@ description = "A collection of helpful resources for air steps practitioners at 
 page_title = "AIR STEP RESOURCES"
 +++
 
-<p class="subtitle">A collection of helpful resources for air steps practitioners at all levels.</p>
+<p class="text-sm text-gray-800 italic pb-4">A collection of helpful resources for air steps practitioners at all levels.</p>
 
 [Start Here](/resources/airsteps-start-here/) - Read this before attempting air steps
 

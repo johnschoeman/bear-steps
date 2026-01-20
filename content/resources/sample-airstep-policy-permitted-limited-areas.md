@@ -8,7 +8,7 @@ page_title = "AIR STEPS PERMITTED - LIMITED AREAS"
 
 # Sample Air Steps Policy: Permitted in Limited Areas
 
-<p class="subtitle"><em>Use this policy when you want to allow air steps in controlled settings like jam circles and competitions.</em></p>
+<p class="text-sm text-gray-800 italic pb-4"><em>Use this policy when you want to allow air steps in controlled settings like jam circles and competitions.</em></p>
 
 This policy framework is designed for events that welcome air steps in designated performance areas while maintaining safety on social dance floors. Adapt and modify based on your specific event needs and venue requirements.
 
