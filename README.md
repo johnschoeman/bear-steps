@@ -1,122 +1,49 @@
 # Bear Steps
 
-A static website for the Bear Steps aerials practice group, providing safety guidelines, resources, and community information for airsteps practice.
+Static website promoting safe airsteps practice in the aerials community.
 
-Live site: https://bear-steps.com
+**Live site:** https://bear-steps.com
 
-## About Bear Steps
+## About
 
-Bear Steps is dedicated to promoting safe airsteps practice in the aerials community. The site provides:
-- Safety guidelines and best practices
-- Sample policies for event organizers
-- Educational resources
-- Community testimonials
-- "Start here" guide for newcomers
+Safety guidelines, sample policies, educational resources, and community testimonials for event organizers and dancers.
 
 ## Tech Stack
 
-- **Static Site Generator**: Zola v0.22.0 (Rust-based, single binary)
-- **CSS Framework**: Tailwind CSS v4 (standalone CLI, single binary)
-- **Hosting**: GitHub Pages
-- **Deployment**: Automatic via GitHub Actions
+- Zola v0.22.0 (static site generator)
+- Tailwind CSS v4 (@tailwindcss/typography plugin)
+- GitHub Pages (auto-deploy)
 
-## Project Structure
+## Development
 
-```
-bear-steps/
-├── config.toml             # Zola configuration
-├── tailwind.config.js      # Tailwind CSS configuration
-├── content/                # Markdown content files
-│   ├── _index.md          # Homepage
-│   ├── about.md
-│   ├── airsteps-start-here.md
-│   ├── resources.md
-│   ├── testimonials.md
-│   └── [sample policies and guidelines].md
-├── templates/              # Zola templates
-│   ├── base.html
-│   ├── index.html
-│   ├── page.html
-│   └── partials/
-│       ├── head.html
-│       ├── header.html
-│       └── footer.html
-├── styles/
-│   └── input.css          # Tailwind CSS source
-├── static/                 # Static assets (served from root)
-│   ├── bear-steps-logo.png
-│   ├── styles.css         # Built CSS (gitignored)
-│   ├── CNAME
-│   └── [favicons]
-└── public/                 # Build output (gitignored)
-```
-
-## Getting Started
-
-### Prerequisites
-
-- **Node.js** - v20 or later (for npm)
-- **Zola v0.22.0** - [Download](https://github.com/getzola/zola/releases/tag/v0.22.0)
-
-### Local Development
-
-1. **Install dependencies:**
+**Setup:**
 ```bash
 npm install
+npm run dev     # Visit http://127.0.0.1:1111
 ```
 
-2. **Run development server:**
-```bash
-npm run dev
+**Commands:**
+- `npm run dev` - Local development (watch CSS + serve site)
+- `npm run build` - Build production site
+- `npm run css:build` - Build CSS only
+
+**Deploy:** Push to `main` → GitHub Actions → live site
+
+## Structure
+
 ```
-
-This starts both Tailwind CSS in watch mode and the Zola dev server.
-
-3. Visit `http://127.0.0.1:1111`
-
-The site will auto-reload when you make changes to content or templates.
-
-### Build Commands
-
-- `npm run build:css` - Build Tailwind CSS (minified)
-- `npm run watch:css` - Watch CSS for changes
-- `npm run build` - Build CSS + Zola site
-- `npm run dev` - Development mode (watch CSS + serve site)
-
-### Making Changes
-
-#### Content Updates
-
-Edit Markdown files in `content/` directory:
-- Frontmatter defines page metadata (title, description)
-- Content is written in Markdown
-- Internal links use format: `[Link Text](/page-slug/)`
-
-#### Style Updates
-
-Edit `styles/input.css` with custom CSS or Tailwind utilities.
-Tailwind will rebuild automatically if running with `--watch`.
-
-#### Template Updates
-
-Edit templates in `templates/` directory:
-- `base.html` - Base HTML structure
-- `page.html` - Standard content pages
-- `index.html` - Homepage
-- `partials/` - Reusable components
-
-### Deployment
-
-1. Commit and push to main branch
-2. GitHub Actions automatically builds and deploys
-3. Changes appear at bear-steps.com within 1-2 minutes
+├── content/             # Markdown content (safety-critical)
+├── templates/           # Zola templates
+├── css/input.css        # Tailwind source
+└── static/              # Assets (logo, favicons)
+```
 
 ## Contributing
 
-See [ROADMAP.md](ROADMAP.md) for planned features and priorities.
+See [docs/ROADMAP.md](docs/ROADMAP.md) for priorities.
 
 ## Documentation
 
-- [CHANGELOG.md](CHANGELOG.md) - Recent changes and version history
-- [ROADMAP.md](ROADMAP.md) - Upcoming priorities and planned features
-- [CLAUDE.md](CLAUDE.md) - AI assistant development guidelines
+- [CHANGELOG.md](docs/CHANGELOG.md) - Recent changes
+- [ROADMAP.md](docs/ROADMAP.md) - Planned features
+- [CLAUDE.md](docs/CLAUDE.md) - AI development guidelines
